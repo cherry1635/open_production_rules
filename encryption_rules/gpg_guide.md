@@ -34,4 +34,11 @@ Solution:
 If gnupg2 and gpg-agent 2.x are used, be sure to set the environment variable GPG_TTY.
 
 export GPG_TTY=$(tty)
- export GPG_TTY=$(tty)
+
+
+
+ssh-agent -s
+ssh-add github_ed25519-sk_SFDN4125
+ssh-add -l
+// output
+256 SHA256:p7qrlQqJGIRiDf0CBBY+yYf5a46/qWU0kBxE48gmS7c only for cherry1635 github repo clone and push (ED25519)
