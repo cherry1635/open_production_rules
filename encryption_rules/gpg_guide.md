@@ -30,7 +30,35 @@ gpg: OpenPGP card not available: Service is not running
 ### gpgconf --list-dirs agent-socket
 This command will display the directory where the GPG agent's socket file is located. If the GPG agent is running, this command will output the path to the agent's socket file. If the GPG agent is not running, it will not display any output.
 
-If you see a path to the agent's socket file, it means that the GPG agent is running. If you don't see any output, it means that the GPG agent is not running.
+If you see a path to the agent's socket file, it means that the GPG agent is running. If you don't see any output, it means that the GPG agent is not 
+running.
+
+```bash
+gpg --list-secret-keys --keyid-format LONG
+git commit -S -m "Your commit message"
+```
+
+<div>
+<img src="./pngs/gpg-list.png" alt="Image" width="380" height="auto">
+</div>
+
+```bash
+
+git config --global user.signingkey <key-id>
+
+```
+Configure Your GitHub Account
+If you're using GitHub, you'll also need to upload your GPG public key to your GitHub account to verify signed commits:
+
+Export your GPG public key:
+
+<div>
+<img src="./pngs/gpg-pub-export.png" alt="Image" width="380" height="auto">
+</div>
+
+```bash
+gpg --armor --export <key-id>
+```
 
 ### problem about:
  error: gpg failed to sign the data:
