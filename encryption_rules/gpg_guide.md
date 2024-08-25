@@ -1,3 +1,11 @@
+#### generate key
+<div>
+<img src="./pngs/gpg-gen-key.png" alt="Image" width="380" height="auto">
+</div>
+
+#### gpg --list-secret-keys --keyid-format LONG
+
+
 gpg --list-secret-keys --keyid-format LONG
 gpg --armor --export <key-id>
 # it will show PUBLIC KEY
